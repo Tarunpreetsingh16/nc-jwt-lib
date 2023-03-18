@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.0.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.neighborhood.connect</groupId>
+	<artifactId>jwt-lib</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+	<name>jwt-lib</name>
+	<description>JWT library for neighborhood project</description>
+
+	<properties>
+		<java.version>17</java.version>
+		<kotlin.version>1.7.22</kotlin.version>
+		<jjwt.api.version>0.11.5</jjwt.api.version>
+		<jjwt.impl.version>0.11.5</jjwt.impl.version>
+		<jjwt.jackson.version>0.11.1</jjwt.jackson.version>
+		<maven.plugin.plugin.version>3.8.1</maven.plugin.plugin.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-kotlin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-reflect</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-stdlib-jdk8</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>${jjwt.api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>${jjwt.impl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>${jjwt.jackson.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-maven-plugin</artifactId>
+				<version>${kotlin.version}</version>
+
+				<executions>
+					<execution>
+						<id>compile</id>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+
+					<execution>
+						<id>test-compile</id>
+						<goals>
+							<goal>test-compile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.6</version>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
