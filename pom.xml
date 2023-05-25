@@ -23,6 +23,14 @@
 		<maven.plugin.plugin.version>3.8.1</maven.plugin.plugin.version>
 	</properties>
 
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub OWNER Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/Tarunpreetsingh16/maven-repository</url>
+		</repository>
+	</distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
