@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.neighborhood.connect</groupId>
 	<artifactId>jwt-lib</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.4</version>
 	<name>jwt-lib</name>
 	<description>JWT library for neighborhood project</description>
 
@@ -22,6 +22,14 @@
 		<jjwt.jackson.version>0.11.1</jjwt.jackson.version>
 		<maven.plugin.plugin.version>3.8.1</maven.plugin.plugin.version>
 	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub OWNER Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/Tarunpreetsingh16/maven-repository</url>
+		</repository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
