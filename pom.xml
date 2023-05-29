@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.neighborhood.connect</groupId>
 	<artifactId>jwt-lib</artifactId>
-	<version>0.0.4</version>
+	<version>0.0.5</version>
 	<name>jwt-lib</name>
 	<description>JWT library for neighborhood project</description>
 
