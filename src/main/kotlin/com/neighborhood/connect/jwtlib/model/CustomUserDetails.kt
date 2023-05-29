@@ -20,6 +20,10 @@ class CustomUserDetails(
         return userCredentials.username
     }
 
+    fun getUserId(): Int? {
+        return userCredentials.id
+    }
+
     override fun isAccountNonExpired(): Boolean {
         return true
     }
